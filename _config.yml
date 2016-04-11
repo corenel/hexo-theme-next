@@ -6,7 +6,7 @@
 favicon: /favicon.ico
 
 # Set default keywords (Use a comma to separate)
-keywords: "Hexo, NexT"
+keywords: "Hexo, Yusu Pan"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -14,7 +14,7 @@ keywords: "Hexo, NexT"
 rss:
 
 # Specify the date when the site was setup
-#since: 2015
+since: 2015
 
 
 
@@ -26,7 +26,7 @@ rss:
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
-  #categories: /categories
+  categories: /categories
   #about: /about
   archives: /archives
   tags: /tags
@@ -56,8 +56,8 @@ menu_icons:
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Muse
-#scheme: Mist
+#scheme: Muse
+scheme: Mist
 #scheme: Pisces
 
 
@@ -117,8 +117,11 @@ font:
 # Social Links
 # Key is the link label showing to end users.
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
-#social:
+social:
   #LinkLabel: Link
+  Github: https://github.com/corenel
+  Twitter: https://twitter.com/corenel
+  Zhihu: http://www.zhihu.com/people/pan-yu-su
 
 
 # Social Links Icons
@@ -132,7 +135,7 @@ social_icons:
   # KeyMapsToSocalItemKey: NameOfTheIconFromFontAwesome
   GitHub: github
   Twitter: twitter
-  Weibo: weibo
+  Zhihu: zhihu
 
 
 # Sidebar Avatar
@@ -220,12 +223,12 @@ auto_excerpt:
 
 # MathJax Support
 mathjax:
-  enable: false
+  enable: true
   cdn: //cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
 
 # Swiftype Search API Key
-#swiftype_key:
+swiftype_key: 8vu1hBNS3UdzW2yEFr9x
 
 # Baidu Analytics ID
 #baidu_analytics:
@@ -251,11 +254,11 @@ mathjax:
 
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
-#google_site_verification:
+google_site_verification: BGEL63KNRW25AkpCy3shpRdMWDHE9LZTAFS3XSHtFK8
 
 
 # Google Analytics
-#google_analytics:
+google_analytics: UA-76233259-1
 
 # CNZZ count
 #cnzz_siteid:
