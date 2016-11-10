@@ -6,7 +6,7 @@
 favicon: /favicon.ico
 
 # Set default keywords (Use a comma to separate)
-keywords: "Hexo, Yusu Pan"
+keywords: "Hexo,Yusu Pan,Deep learning,Computer Vision,Web fronted"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -33,7 +33,7 @@ menu:
   #about: /about
   archives: /archives
   tags: /tags
-  schedule: /schedule
+  # schedule: /schedule
   #commonweal: /404.html
 
 
@@ -355,7 +355,6 @@ calendar:
   showDeleted: false
   singleEvents: true
   maxResults: 250
-
 
 #! ---------------------------------------------------------------
 #! DO NOT EDIT THE FOLLOWING SETTINGS
