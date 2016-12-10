@@ -132,7 +132,7 @@ font:
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
 social:
   #LinkLabel: Link
-  Github: https://github.com/corenel
+  GitHub: https://github.com/corenel
   Twitter: https://twitter.com/corenel
   Zhihu: http://www.zhihu.com/people/pan-yu-su
 
@@ -148,7 +148,7 @@ social_icons:
   # KeyMapsToSocalItemKey: NameOfTheIconFromFontAwesome
   GitHub: github
   Twitter: twitter
-  Zhihu: zhihu
+  Zhihu: globe
 
 
 # Sidebar Avatar
