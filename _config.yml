@@ -457,7 +457,6 @@ local_search:
 # Alias: {% extlink text url "title" %}
 exturl: false
 
->>>>>>> 218f5380f39a2b46f4d9d9aa5a38231010916040
 
 #! ---------------------------------------------------------------
 #! DO NOT EDIT THE FOLLOWING SETTINGS
