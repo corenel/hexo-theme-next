@@ -287,10 +287,10 @@ mathjax:
 #baidu_analytics:
 
 # Duoshuo ShortName
-duoshuo_shortname: yuthon
+# duoshuo_shortname: yuthon
 
 # Disqus
-#disqus_shortname:
+disqus_shortname: yuthons-blog
 
 # Hypercomments
 #hypercomments_id:
