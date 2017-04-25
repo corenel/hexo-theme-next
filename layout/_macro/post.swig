@@ -135,14 +135,15 @@
                   <span class="post-comments-count fb-comments-count" data-href="{{ post.permalink }}" itemprop="commentCount">0</span> comments
                 </a>
               </span>
-            {% elseif theme.disqus_shortname %}
+            {% elseif theme.disqus.enable and theme.disqus.count %}
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="{{ url_for(post.path) }}#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="{{ post.path }}" itemprop="commentCount"></span>
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="{{ post.path }}" itemprop="commentCount"></span>
                 </a>
               </span>
             {% elseif theme.hypercomments_id %}
@@ -167,6 +168,21 @@
                   <span class="post-comments-count join-count" itemprop="commentCount"></span>
                 </a>
               </span>
+            {% elseif theme.changyan.enable and theme.changyan.appid and theme.changyan.appkey %}
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              {% if is_post() %}
+                <a href="{{ url_for(post.path) }}#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="{{ post.path }}" itemprop="commentsCount"></span>
+                </a>
+              {% else %}
+                <a href="{{ url_for(post.path) }}#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::{{ post.permalink }}" class="cy_cmt_count" data-xid="{{ post.path }}" itemprop="commentsCount" ></span>
+                </a>
+              {% endif %}
             {% endif %}
           {% endif %}
 
@@ -194,6 +210,7 @@
           {% if theme.post_wordcount.wordcount or theme.post_wordcount.min2read %}
             <div class="post-wordcount">
               {% if theme.post_wordcount.wordcount %}
+                <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-file-word-o"></i>
                 </span>
@@ -216,7 +233,7 @@
                 {% if theme.post_wordcount.item_text %}
                   <span class="post-meta-item-text">{{ __('post.min2read') }}</span>
                 {% endif %}
-                <span title="{{ __('post.min2read') }}" }}">
+                <span title="{{ __('post.min2read') }}">
                   {{ min2read(post.content) }}
                 </span>
               {% endif %}
@@ -233,8 +250,7 @@
       </header>
     {% endif %}
 
-
-    <div class="post-body" itemprop="articleBody">
+    <div class="post-body{% if theme.han %} han-init-context{% endif %}" itemprop="articleBody">
 
       {# Gallery support #}
       {% if post.photos and post.photos.length %}
@@ -309,6 +325,11 @@
       {% endif %}
     </div>
 
+    <div>
+      {% if not is_index %}
+        {% include 'post-copyright.swig' with { post: post } %}
+      {% endif %}
+    </div>
 
     <footer class="post-footer">
       {% if post.tags and post.tags.length and not is_index %}
